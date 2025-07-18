@@ -1,4 +1,5 @@
-# --- FIX START ---
+# D:\mcq-generator\backend\app\main.py
+
 from dotenv import load_dotenv
 load_dotenv() # Load environment variables from .env file
 # --- FIX END ---
@@ -19,9 +20,13 @@ app = FastAPI(lifespan=lifespan,
              )
 
 # Configure CORS
+# IMPORTANT: You will update "https://YOUR_NETLIFY_APP_URL.netlify.app"
+# after your React app is deployed in Phase 3 of the deployment guide.
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    # Add your deployed Netlify frontend URL here after it's deployed
+    "https://YOUR_NETLIFY_APP_URL.netlify.app", # <--- Placeholder for your Netlify URL
 ]
 
 app.add_middleware(
