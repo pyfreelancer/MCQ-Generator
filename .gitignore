@@ -1,0 +1,48 @@
+# .gitignore (in your D:\mcq-generator folder)
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+.pytest_cache/
+.ipynb_checkpoints/
+dist/
+build/
+*.egg-info/
+
+# Your specific virtual environment (adjust if named differently)
+mcqgen_env/
+
+# Node.js / React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# npm package manager cache
+.npm/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Build outputs for React frontend (crucial for deployment later)
+frontend/build/

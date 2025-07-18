@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for the dark theme */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: theme('colors.dark-bg'); /* Use very dark background */
+  color: theme('colors.text-light'); /* Default white text color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card/Section base styling */
+.card-style {
+  background-color: theme('colors.dark-card'); /* Slightly lighter dark for cards */
+  border-radius: 0.75rem; /* Rounded corners (12px) */
+  box-shadow: theme('boxShadow.custom-light'); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input and Select base styling */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  background-color: theme('colors.dark-bg'); /* Dark background for inputs */
+  border: 1px solid theme('colors.dark-card'); /* Subtle border */
+  color: theme('colors.text-light');
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem; /* Slightly rounded input corners */
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: theme('colors.accent-green'); /* Green border on focus */
+  box-shadow: 0 0 0 2px theme('colors.accent-green'); /* Green focus ring */
+}
+
+/* Adjusting file input for theme */
+input[type="file"]::file-selector-button {
+  background-color: theme('colors.accent-green');
+  color: theme('colors.dark-bg'); /* Dark text on green button */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #00B359; /* Changed from color-mix to a specific hex for compatibility */
+}
+
+/* Custom radio button styling */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid theme('colors.text-secondary'); /* Light grey border */
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked {
+  background-color: theme('colors.accent-green'); /* Green when checked */
+  border-color: theme('colors.accent-green');
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  display: block;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: theme('colors.dark-bg'); /* Dark dot inside */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

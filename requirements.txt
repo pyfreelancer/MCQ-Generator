@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+langchain
+python-dotenv
+transformers
+sentence-transformers
+huggingface-hub
+pymongo
+
+
