@@ -5,7 +5,7 @@ langchain
 python-dotenv
 transformers
 sentence-transformers
-huggingface-hub
+gemini-2.0-flash
 pymongo
 
 
